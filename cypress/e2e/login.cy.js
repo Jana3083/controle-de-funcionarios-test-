@@ -8,7 +8,7 @@ const USER_EMAIL = 'admin@admin.com';
 const USER_SENHA = '123456';
 
 // Especificação de testes 
-describe('Login', () => {
+describe('login', () => {
 
   // Cenário de teste - sucesso
   it('Deve fazer login com sucesso', () => {

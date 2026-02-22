@@ -43,7 +43,7 @@ describe('Dashboard', () => {
     cy.xpath('//*[@id="tela-consulta"]/div[1]/h4').should('contain', 'Consulta de Funcionários');
 
     // EVIDÊNCIAS
-    cy.screenshot('abrir-consulta  ', { overwrite: true });
+    cy.screenshot('abrir-consulta', { overwrite: true });
   });
 
 });

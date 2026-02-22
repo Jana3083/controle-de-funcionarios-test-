@@ -26,7 +26,7 @@ describe('consulta', () => {
     cy.xpath('//*[@id="col-nome-1"]').should('contain', 'Mariana Pereira');
 
     // EVIDÊNCIAS
-    cy.screenshot('consulta-funcionario ', { overwrite: true });
+    cy.screenshot('consulta-funcionario', { overwrite: true });
 
       });
 
