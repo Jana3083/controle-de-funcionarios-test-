@@ -1,14 +1,21 @@
 import 'cypress-xpath';
 
+//VARIAVEIS GLOBAIS de configuração
+const URL_Login = 'https://cotiaws.github.io/controle-de-funcionarios/app/index.html';
+
+//VARIÁVEIS GLOBAIS de valores
+const USER_EMAIL = 'admin@admin.com';
+const USER_SENHA = '123456';
+
 // Especificação de testes 
 describe('fluxo-completo', () => {
 
   // Cenário de teste - sucesso
   it('Realizar o fluxo completo de cadastro e consulta', () => {
     // ARRANGE -> Acesso à página do sistema
-    cy.visit('https://cotiaws.github.io/controle-de-funcionarios/app/index.html'); // acesso à página do sistema
-    cy.xpath('//*[@id="login-email"]').type('admin@admin.com'); // preenchimento do campo de email para login
-    cy.xpath('//*[@id="login-senha"]').type('123456'); // preenchimento do campo de senha para login
+    cy.visit(URL_Login); // acesso à página do sistema
+    cy.xpath('//*[@id="login-email"]').type(USER_EMAIL); // preenchimento do campo de email para login
+    cy.xpath('//*[@id="login-senha"]').type(USER_SENHA); // preenchimento do campo de senha para login
     cy.xpath('//*[@id="btn-login"]').click(); // ação para realizar o login no sistema
     cy.xpath('//*[@id="btn-ir-cadastro"]').click(); // ação para acessar a tela de cadastro de funcionário
 
